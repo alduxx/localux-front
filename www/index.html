@@ -1,0 +1,268 @@
+        <!DOCTYPE html>
+<html>
+<head lang=en dir=ltr>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset=utf-8>
+    <title>Casa Container</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel=stylesheet>
+    <style media=screen>
+    body,html{
+        background:#111;height:100%;padding:0;margin:0;overflow:hidden;font-family:Montserrat,sans-serif}
+        svg {position:fixed;top:0;left:0;height:90%;}
+        #dummyColorOff {display:none;color:#f9f9f9;}
+        #dummyColorOn {display:none;color:#ff9b00;}
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var colorOff = $("#dummyColorOff").css("color");
+            var colorOn = $("#dummyColorOn").css("color");
+
+            $("#recAntesala").click(function(){
+                if($(this).css("stroke")==colorOff){
+                    $(this).css("stroke", colorOn);
+                } else {
+                    $(this).css("stroke", colorOff);
+                }
+            });
+
+            $("#recSalaLateralDir, #recSalaLateralEsq").click(function(){
+                if($(this).css("stroke")==colorOff){
+                    $("#recSalaLateralDir, #recSalaLateralEsq").css("stroke", colorOn);
+                } else {
+                    $("#recSalaLateralDir, #recSalaLateralEsq").css("stroke", colorOff);
+                }
+            });
+
+            $("#recSalaCentral").click(function(){
+                if($(this).css("stroke")==colorOff){
+                    $(this).css("stroke", colorOn);
+                } else {
+                    $(this).css("stroke", colorOff);
+                }
+            });
+
+            $("#recVaranda").click(function(){
+                if($(this).css("stroke")==colorOff){
+                    $(this).css("stroke", colorOn);
+                } else {
+                    $(this).css("stroke", colorOff);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" height="297mm" width="210mm" version="1.1" viewBox="0 0 210 297">
+ <g transform="matrix(.91643 0 0 .96956 221.34 -554.36)">
+  <g transform="translate(0 2.1167)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(40.222 2.1167)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(79.138 2.1167)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(20.142 .89921)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(59.059 .89921)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(98.463 .89921)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+ </g>
+ <g stroke-linecap="round" stroke-miterlimit="3.8" fill="none">
+  <rect height="189.26" width="120.02" stroke="#1a1a1a" y="28.229" x="48.588" stroke-width="4.9515"/>
+  <rect height="47.748" width="119.96" stroke="#1a1a1a" y="217.52" x="48.614" stroke-width="3.301"/>
+  <rect id="recAntesala" fill="#005cb8" fill-opacity="0" stroke-opacity=".93725" height="47.748" width="119.96" stroke="#f9f9f9" y="217.52" x="48.614" stroke-width=".82525"/>
+ </g>
+ <g transform="matrix(.91643 0 0 -.96956 221.34 1037.9)">
+  <g transform="translate(0 2.1167)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(40.222 2.1167)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(79.138 2.1167)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(20.142 .89921)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(59.059 .89921)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="translate(98.463 .89921)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+ </g>
+ <g transform="matrix(0 .65237 -.96956 0 1012.5 294.98)">
+  <g transform="matrix(.94520 0 0 -1 81.117 1674.5)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="matrix(.94520 0 0 -1 62.137 1675.7)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="matrix(.94520 0 0 -1 99.382 1675.7)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+ </g>
+ <g transform="matrix(0 .65237 .96956 0 -794.34 295.31)">
+  <g transform="matrix(.94520 0 0 -1 81.117 1674.5)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="matrix(.94520 0 0 -1 62.137 1675.7)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="matrix(.94520 0 0 -1 99.382 1675.7)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+ </g>
+ <g transform="matrix(1.0205 0 0 1.0205 233.48 -583.32)">
+  <g transform="matrix(0 .94520 -1 0 677.53 780.55)">
+   <g transform="translate(0 2.1167)">
+    <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+    <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+   </g>
+   <g transform="translate(40.222 2.1167)">
+    <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+    <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+   </g>
+   <g transform="translate(79.138 2.1167)">
+    <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+    <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+   </g>
+   <g transform="translate(20.142 .89921)">
+    <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+    <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+   </g>
+   <g transform="translate(59.059 .89921)">
+    <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+    <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+   </g>
+   <g transform="translate(98.463 .89921)">
+    <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+    <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+   </g>
+  </g>
+  <g transform="matrix(0 .94520 -1 0 676.06 890.54)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="matrix(0 .94520 -1 0 676.06 928.55)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+  <g transform="matrix(0 .94520 -1 0 677.28 909.58)">
+   <rect height="1.4162" width="22.287" y="799.81" x="-183.01" fill="#005cb8"/>
+   <rect height="1.1453" width="21.124" y="799.64" x="-182.46" fill="#4e8ed8"/>
+  </g>
+ </g>
+ <g stroke-linecap="round" stroke-miterlimit="3.8" fill="none">
+   <rect id="recVaranda" fill="#fff" fill-opacity="0"  height="14.955" width="102.66" stroke="#f9f9f9" y="268.4" x="57.758" stroke-width=".64156"/>
+   <rect id="recSalaCentral" fill="#fff" fill-opacity="0" stroke="#f9f9f9" transform="rotate(90)" height="14.955" width="181.94" y="-114.32" x="33.021"/>
+  <g stroke="#fff" stroke-width=".72717">
+   <rect id="recSalaLateralDir" fill="#fff" fill-opacity="0" transform="rotate(90)" height="14.955" width="181.94" y="-160.72" x="33.021"/>
+   <rect id="recSalaLateralEsq" fill="#fff" fill-opacity="0"  transform="rotate(90)" height="14.955" width="181.94" y="-71.011" x="33.021"/>
+  </g>
+ </g>
+ <g transform="translate(124.78 -9.7893)" stroke="#005cb8" stroke-linecap="round" stroke-width=".54977">
+  <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+  <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+  <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  <g transform="translate(0 31.771)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 63.543)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 95.314)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 127.09)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 158.86)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+ </g>
+ <g transform="translate(35.074 -9.7893)" stroke="#005cb8" stroke-linecap="round" stroke-width=".54977">
+  <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+  <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+  <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  <g transform="translate(0 31.771)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 63.543)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 95.314)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 127.09)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+  <g transform="translate(0 158.86)">
+   <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+   <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+   <circle cx="54.352" transform="rotate(90)" cy="-28.459" r="2.15" stroke-miterlimit="3.8" fill="#92b8fd"/>
+  </g>
+ </g>
+ <g transform="translate(48.827 221.52)" stroke="#005cb8" stroke-linecap="round" stroke-width=".54977">
+  <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+  <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+  <circle transform="rotate(90)" cy="-28.459" cx="54.352" stroke-miterlimit="3.8" r="2.15" fill="#92b8fd"/>
+ </g>
+ <g transform="translate(116.71 221.52)" stroke="#005cb8" stroke-linecap="round" stroke-width=".54977">
+  <path style="paint-order:stroke fill markers" d="m32.496 54.352h-8.074" fill="none"/>
+  <path style="paint-order:stroke fill markers" d="m28.459 58.388v-8.073" fill="none"/>
+  <circle transform="rotate(90)" cy="-28.459" cx="54.352" stroke-miterlimit="3.8" r="2.15" fill="#92b8fd"/>
+ </g>
+</svg>
+
+   //<rect id="recVaranda" fill="#fff" fill-opacity="0"  height="14.955" width="102.66" stroke="#f9f9f9" y="268.4" x="57.758" stroke-width=".64156"/>
+
+<span id="dummyColorOff"></span>
+<span id="dummyColorOn"></span>
+</body>
+

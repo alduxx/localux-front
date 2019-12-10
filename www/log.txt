@@ -1,0 +1,6 @@
+Attaching to alduxino_apache2
+[36mapache_1  |[0m AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+[36mapache_1  |[0m AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.17.0.2. Set the 'ServerName' directive globally to suppress this message
+[36mapache_1  |[0m [Tue Dec 10 18:10:24.030571 2019] [mpm_event:notice] [pid 1:tid 140021168555136] AH00489: Apache/2.4.41 (Unix) configured -- resuming normal operations
+[36mapache_1  |[0m [Tue Dec 10 18:10:24.030716 2019] [core:notice] [pid 1:tid 140021168555136] AH00094: Command line: 'httpd -D FOREGROUND'
+Gracefully stopping... (press Ctrl+C again to force)
