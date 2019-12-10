@@ -1,0 +1,2 @@
+# localux-front
+Frontend Localux
