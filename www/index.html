@@ -3,7 +3,7 @@
 <head lang=en dir=ltr>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset=utf-8>
-    <title>Casa Container</title>
+    <title>Quarkus Test</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap" rel=stylesheet>
     <style media=screen>
     body,html{
@@ -13,43 +13,49 @@
         #dummyColorOn {display:none;color:#ff9b00;}
     </style>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
+        var colorOff;
+        var colorOn;
+
+        function getInitialLightStatus() {
+           $.get( "http://localhost:8080/lights", function( lights ) {
+                console.log(lights);
+                $.each(lights, function(idx, l){
+                    console.log(l);
+                    var color = l.status==1 ? colorOn : colorOff;
+                    $(".light" + l.id)
+                        .css("stroke", color)
+                        .click(function(){
+                            toggleLightStatus(l.id);
+                        });
+                });
+            });
+        }
+
+        function toggleLightStatus(id){
+            var color = "#F3F315";
+            $(".light" + id).css("stroke", color); // means color loading   
+            $.ajax({
+                method: 'PUT',
+                url: 'http://localhost:8080/lights?id=' + id,
+                contentType: 'application/json'
+            }).done(function( light ){
+                color = light.status==1 ? colorOn : colorOff;
+            }).fail(function() {
+                color = "#F00";
+            }).always(function() {
+                $(".light" + id).css("stroke", color);
+            });
+        }
+
+
         $(document).ready(function(){
-            var colorOff = $("#dummyColorOff").css("color");
-            var colorOn = $("#dummyColorOn").css("color");
+            colorOff = $("#dummyColorOff").css("color");
+            colorOn = $("#dummyColorOn").css("color");
 
-            $("#recAntesala").click(function(){
-                if($(this).css("stroke")==colorOff){
-                    $(this).css("stroke", colorOn);
-                } else {
-                    $(this).css("stroke", colorOff);
-                }
-            });
-
-            $("#recSalaLateralDir, #recSalaLateralEsq").click(function(){
-                if($(this).css("stroke")==colorOff){
-                    $("#recSalaLateralDir, #recSalaLateralEsq").css("stroke", colorOn);
-                } else {
-                    $("#recSalaLateralDir, #recSalaLateralEsq").css("stroke", colorOff);
-                }
-            });
-
-            $("#recSalaCentral").click(function(){
-                if($(this).css("stroke")==colorOff){
-                    $(this).css("stroke", colorOn);
-                } else {
-                    $(this).css("stroke", colorOff);
-                }
-            });
-
-            $("#recVaranda").click(function(){
-                if($(this).css("stroke")==colorOff){
-                    $(this).css("stroke", colorOn);
-                } else {
-                    $(this).css("stroke", colorOff);
-                }
-            });
+            getInitialLightStatus();
         });
     </script>
 </head>
@@ -84,7 +90,7 @@
  <g stroke-linecap="round" stroke-miterlimit="3.8" fill="none">
   <rect height="189.26" width="120.02" stroke="#1a1a1a" y="28.229" x="48.588" stroke-width="4.9515"/>
   <rect height="47.748" width="119.96" stroke="#1a1a1a" y="217.52" x="48.614" stroke-width="3.301"/>
-  <rect id="recAntesala" fill="#005cb8" fill-opacity="0" stroke-opacity=".93725" height="47.748" width="119.96" stroke="#f9f9f9" y="217.52" x="48.614" stroke-width=".82525"/>
+  <rect class="light15" fill="#005cb8" fill-opacity="0" stroke-opacity=".93725" height="47.748" width="119.96" stroke="#f9f9f9" y="217.52" x="48.614" stroke-width=".82525"/>
  </g>
  <g transform="matrix(.91643 0 0 -.96956 221.34 1037.9)">
   <g transform="translate(0 2.1167)">
@@ -181,11 +187,11 @@
   </g>
  </g>
  <g stroke-linecap="round" stroke-miterlimit="3.8" fill="none">
-   <rect id="recVaranda" fill="#fff" fill-opacity="0"  height="14.955" width="102.66" stroke="#f9f9f9" y="268.4" x="57.758" stroke-width=".64156"/>
-   <rect id="recSalaCentral" fill="#fff" fill-opacity="0" stroke="#f9f9f9" transform="rotate(90)" height="14.955" width="181.94" y="-114.32" x="33.021"/>
+   <rect class="light13" fill="#fff" fill-opacity="0"  height="14.955" width="102.66" stroke="#f9f9f9" y="268.4" x="57.758" stroke-width=".64156"/>
+   <rect class="light14" fill="#fff" fill-opacity="0" stroke="#f9f9f9" transform="rotate(90)" height="14.955" width="181.94" y="-114.32" x="33.021"/>
   <g stroke="#fff" stroke-width=".72717">
-   <rect id="recSalaLateralDir" fill="#fff" fill-opacity="0" transform="rotate(90)" height="14.955" width="181.94" y="-160.72" x="33.021"/>
-   <rect id="recSalaLateralEsq" fill="#fff" fill-opacity="0"  transform="rotate(90)" height="14.955" width="181.94" y="-71.011" x="33.021"/>
+   <rect class="light12" fill="#fff" fill-opacity="0" transform="rotate(90)" height="14.955" width="181.94" y="-160.72" x="33.021"/>
+   <rect class="light12" fill="#fff" fill-opacity="0"  transform="rotate(90)" height="14.955" width="181.94" y="-71.011" x="33.021"/>
   </g>
  </g>
  <g transform="translate(124.78 -9.7893)" stroke="#005cb8" stroke-linecap="round" stroke-width=".54977">
@@ -265,4 +271,3 @@
 <span id="dummyColorOff"></span>
 <span id="dummyColorOn"></span>
 </body>
-
