@@ -18,9 +18,12 @@
     <script>
         var colorOff;
         var colorOn;
+        var baseUrl = location.protocol + "//" + location.host + ":8080";
+
+        console.log(baseUrl);
 
         function getInitialLightStatus() {
-           $.get( "http://localhost:8080/lights", function( lights ) {
+           $.get( baseUrl + "/lights", function( lights ) {
                 console.log(lights);
                 $.each(lights, function(idx, l){
                     console.log(l);
@@ -36,10 +39,10 @@
 
         function toggleLightStatus(id){
             var color = "#F3F315";
-            $(".light" + id).css("stroke", color); // means color loading   
+            $(".light" + id).css("stroke", color); // means color loading
             $.ajax({
                 method: 'PUT',
-                url: 'http://localhost:8080/lights?id=' + id,
+                url: baseUrl + '/lights?id=' + id,
                 contentType: 'application/json'
             }).done(function( light ){
                 color = light.status==1 ? colorOn : colorOff;
